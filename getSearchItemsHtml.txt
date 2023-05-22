@@ -1,5 +1,14 @@
 <div class="mainContainer">
 	<div class="AllHadith">
+		<div align=right style="float: right;">
+			<ul class="yiiPager">
+				<li class="previous hidden"></li>
+				<li class="page selected">
+					<a href="/search?q=sus&page=1"></a>
+				</li>
+				<li class="page"></li>
+			</ul>
+		</div>
 		<div class="boh">
 			<div class="actualHadithContainer">
 				<a style="display:block;" href="bookName:0000">
