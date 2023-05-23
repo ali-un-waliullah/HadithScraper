@@ -9,6 +9,15 @@ def cli():
     pass
 
 
+def clear_collections():
+    """
+    Deletes all files in collections directory
+    """
+    collections = os.listdir("./collections")
+    for c in collections:
+        os.remove(f"./collections/{c}")
+
+
 def get_files_in_pages() -> list:
     """
     Returns a list of files in pages directory
@@ -40,6 +49,7 @@ def search(query: str, output: bool):
     """
     Fetches the search results for the given query and saves it to a file.
     """
+    clear_collections()
     if query:
         if os.listdir("./pages"):
             click.echo("Pages already fetched. Skipping...", color="yellow")
