@@ -15,6 +15,9 @@ def write_file(file_name: str, content: str) -> None:
 
 
 def parse_file(file_name: str) -> BeautifulSoup:
+    """
+    Parses HTML file and returns a soup object
+    """
     return BeautifulSoup(read_file(file_name), 'html.parser')
 
 
@@ -80,7 +83,7 @@ def get_hadith_narrated(soup: BeautifulSoup) -> str:
 
 def get_hadith(soup: BeautifulSoup) -> dict:
     """
-    Returns the hadith from the soup object
+    Returns a Hadith object
     """
     return {
         "bookName": get_book_name(soup),
@@ -108,7 +111,7 @@ def check_pages(soup: BeautifulSoup) -> list:
 
 def get_hadiths(soup: BeautifulSoup) -> list:
     """
-    Returns the hadiths from the soup object
+    Returns a list of Hadith objects.
     """
     output_list = []
     boh_divs = soup.find_all('div', class_='boh')

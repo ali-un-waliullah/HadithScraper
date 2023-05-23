@@ -2,3 +2,27 @@ Host : sunnah.com
 
 Search for a keyword or term: 
  - Search for Hadith containing this term 
+
+ 
+Store a json file in /collections/ with the following format: 
+```
+{
+  "collection": "sunnah.com",
+  "url": "http://sunnah.com/",
+  "search": "http://sunnah.com/search/?q={query}",
+  "query": "query",
+  "tags": [
+    "hadith",
+    "quran",
+    "islam"
+  ],
+  "hadiths" : [
+    {
+
+    },
+    {
+
+    }
+  ]
+}
+```
